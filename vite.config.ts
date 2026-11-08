@@ -2,9 +2,18 @@ import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
+  build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: 'assets/public/[name]-[hash].js',
+        chunkFileNames: 'assets/private/[name]-[hash].js',
+        assetFileNames: 'assets/public/[name]-[hash][extname]',
+      },
+    },
+  },
   plugins: [
     VitePWA({
-      registerType: 'autoUpdate',
+      injectRegister: false,
       strategies: 'injectManifest',
       srcDir: 'src',
       filename: 'sw.js',

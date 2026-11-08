@@ -123,7 +123,7 @@ export function Settings({ state, onAction, onLogout }: { state: State; onAction
         <div className="list-panel">
           <button type="button" className="setting-row" onClick={onLogout}>
             <span className="setting-icon"><LogOut size={19} /></span>
-            <span className="row-text"><strong>Se déconnecter</strong><small>Fermer la session Cloudflare Access</small></span>
+            <span className="row-text"><strong>Se déconnecter</strong><small>Fermer la session Sweat Tracker</small></span>
             <ChevronRight size={16} className="row-arrow" />
           </button>
         </div>

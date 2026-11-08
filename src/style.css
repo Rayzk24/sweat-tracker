@@ -226,6 +226,26 @@ button:disabled { opacity: .6; cursor: wait; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
 
-.access-page { max-width: 450px; }
-.access-page h1 { margin-top: 14px; font-size: 2.25rem; letter-spacing: -.05em; }
-.access-page p { color: var(--soft); margin: 9px 0 17px; line-height: 1.5; }
+.access-page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  align-items: start;
+  justify-items: center;
+  padding: max(24px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left));
+  background: #141817;
+}
+.access-card {
+  width: min(100%, 390px);
+  margin-top: clamp(18px, 10vh, 100px);
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #202622;
+}
+.access-icon { display: block; border-radius: 12px; }
+.access-card h1 { margin: 15px 0 0; font-size: clamp(1.8rem, 6vw, 2.15rem); letter-spacing: -.055em; }
+.access-card > p { margin: 7px 0 22px; color: var(--soft); line-height: 1.5; }
+.access-form { display: grid; gap: 14px; }
+.access-form p { margin: 0; }
+.access-form button { margin-top: 3px; min-height: 47px; }
